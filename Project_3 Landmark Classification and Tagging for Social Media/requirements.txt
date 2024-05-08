@@ -1,0 +1,8 @@
+ipywidgets
+livelossplot
+pytest
+nbconvert
+torch
+torchvision
+voila
+
