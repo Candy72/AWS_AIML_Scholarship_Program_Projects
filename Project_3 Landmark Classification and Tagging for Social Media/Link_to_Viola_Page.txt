@@ -1,0 +1,7 @@
+Click on the link below to take you to the Viola page where you can see project 3
+
+From binder.org
+
+
+https://mybinder.org/v2/gh/Candy72/AWS_AIML_Scholarship_Program_Projects.git/main?labpath=Project_3+Landmark+Classification+and+Tagging+for+Social+Media
+
