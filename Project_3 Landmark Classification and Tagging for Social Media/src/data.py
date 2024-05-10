@@ -9,8 +9,10 @@ from .helpers import compute_mean_and_std, get_data_location
 import matplotlib.pyplot as plt
 
 def get_data_loaders(
-    batch_size: int = 32, valid_size: float = 0.2, num_workers: int = 1, limit: int = -1, **kwargs
+    batch_size: int = 32, valid_size: float = 0.2, num_workers: int = None, limit: int = -1, **kwargs
 ):
+    if num_workers is None:
+        num_workers = multiprocessing.cpu_count()
     """
     Create and returns the train_one_epoch, validation and test data loaders.
 
@@ -45,6 +47,9 @@ def get_data_loaders(
             transforms.Resize(256),
             transforms.RandomCrop(224),
             transforms.RandomHorizontalFlip(),
+            transforms.RandomRotation(15),
+            transforms.ColorJitter(brightness=0.2, contrast=0.2),
+            transforms.RandomAffine(degrees=0, translate=(0.05, 0.05)),
             transforms.ToTensor(),
             transforms.Normalize(mean, std)   
         ]),

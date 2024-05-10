@@ -18,7 +18,7 @@ def get_optimizer(
     model: nn.Module,
     optimizer: str = "SGD",
     learning_rate: float = 0.01,
-    momentum: float = 0.5,
+    momentum: float = 0.9,
     weight_decay: float = 0,
 ):
     """

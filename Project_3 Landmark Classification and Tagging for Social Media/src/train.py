@@ -59,29 +59,15 @@ def valid_one_epoch(valid_dataloader, model, loss):
     """
     Validate at the end of one epoch
     """
-
+    device = next(model.parameters()).device
+    # set the model to evaluation mode
+    model.eval()
+    valid_loss = 0.0
+    correct = total = 0
+    
     with torch.no_grad():
-
-        # set the model to evaluation mode
-        model.eval()
-
-        if torch.cuda.is_available():
-            model.cuda()
-
-        valid_loss = 0.0
-        correct = 0.
-        total = 0.
-
-        for batch_idx, (data, target) in tqdm(
-            enumerate(valid_dataloader),
-            desc="Validating",
-            total=len(valid_dataloader),
-            leave=True,
-            ncols=80,
-        ):
-            # move data to GPU
-            if torch.cuda.is_available():
-                data, target = data.cuda(), target.cuda()
+        for data, target in valid_dataloader:
+            data, target = data.to(device), target.to(device)
 
             # 1. forward pass: compute predicted outputs by passing inputs to the model
             output  = model(data)
@@ -89,16 +75,13 @@ def valid_one_epoch(valid_dataloader, model, loss):
             loss_value  = loss(output, target)
 
             # Calculate average validation loss
-            valid_loss = valid_loss + (
-                (1 / (batch_idx + 1)) * (loss_value.data.item() - valid_loss)
-            )
+            valid_loss += (loss_value.item() - valid_loss) / (len(valid_dataloader))
             
-            preds  = output.data.max(1, keepdim=True)[1]
-            correct += torch.sum(torch.squeeze(preds.eq(target.data.view_as(preds))).cpu()) # compare predictions to true label
+            preds  = output.argmax(dim=1, keepdim=True)
+            correct += preds.eq(target.data.view_as(preds)).sum().item() # compare predictions to true label
             total += data.size(0)
 
-        valid_accuracy = 100. * correct / total
-
+    valid_accuracy = 100. * correct / total
     return valid_loss, valid_accuracy
 
 
