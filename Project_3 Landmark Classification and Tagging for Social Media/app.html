@@ -14647,7 +14647,73 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre><span class="ansi-yellow-fg">WARNING: Running pip as the &#39;root&#39; user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv</span><span class="ansi-yellow-fg">
+<pre>Collecting livelossplot (from -r requirements.txt (line 2))
+  Using cached livelossplot-0.5.5-py3-none-any.whl.metadata (8.7 kB)
+Collecting torch (from -r requirements.txt (line 5))
+  Using cached torch-2.3.0-cp310-cp310-manylinux1_x86_64.whl.metadata (26 kB)
+Collecting torchvision (from -r requirements.txt (line 6))
+  Using cached torchvision-0.18.0-cp310-cp310-manylinux1_x86_64.whl.metadata (6.6 kB)
+Collecting voila (from -r requirements.txt (line 7))
+  Using cached voila-0.5.6-py3-none-any.whl.metadata (9.1 kB)
+Collecting networkx (from torch-&gt;-r requirements.txt (line 5))
+  Using cached networkx-3.3-py3-none-any.whl.metadata (5.1 kB)
+Collecting nvidia-cuda-nvrtc-cu12==12.1.105 (from torch-&gt;-r requirements.txt (line 5))
+  Using cached nvidia_cuda_nvrtc_cu12-12.1.105-py3-none-manylinux1_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cuda-runtime-cu12==12.1.105 (from torch-&gt;-r requirements.txt (line 5))
+  Using cached nvidia_cuda_runtime_cu12-12.1.105-py3-none-manylinux1_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cuda-cupti-cu12==12.1.105 (from torch-&gt;-r requirements.txt (line 5))
+  Using cached nvidia_cuda_cupti_cu12-12.1.105-py3-none-manylinux1_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cudnn-cu12==8.9.2.26 (from torch-&gt;-r requirements.txt (line 5))
+  Using cached nvidia_cudnn_cu12-8.9.2.26-py3-none-manylinux1_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cublas-cu12==12.1.3.1 (from torch-&gt;-r requirements.txt (line 5))
+  Using cached nvidia_cublas_cu12-12.1.3.1-py3-none-manylinux1_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cufft-cu12==11.0.2.54 (from torch-&gt;-r requirements.txt (line 5))
+  Using cached nvidia_cufft_cu12-11.0.2.54-py3-none-manylinux1_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-curand-cu12==10.3.2.106 (from torch-&gt;-r requirements.txt (line 5))
+  Using cached nvidia_curand_cu12-10.3.2.106-py3-none-manylinux1_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cusolver-cu12==11.4.5.107 (from torch-&gt;-r requirements.txt (line 5))
+  Using cached nvidia_cusolver_cu12-11.4.5.107-py3-none-manylinux1_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cusparse-cu12==12.1.0.106 (from torch-&gt;-r requirements.txt (line 5))
+  Using cached nvidia_cusparse_cu12-12.1.0.106-py3-none-manylinux1_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-nccl-cu12==2.20.5 (from torch-&gt;-r requirements.txt (line 5))
+  Using cached nvidia_nccl_cu12-2.20.5-py3-none-manylinux2014_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-nvtx-cu12==12.1.105 (from torch-&gt;-r requirements.txt (line 5))
+  Using cached nvidia_nvtx_cu12-12.1.105-py3-none-manylinux1_x86_64.whl.metadata (1.7 kB)
+Collecting triton==2.3.0 (from torch-&gt;-r requirements.txt (line 5))
+  Using cached triton-2.3.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.4 kB)
+Collecting nvidia-nvjitlink-cu12 (from nvidia-cusolver-cu12==11.4.5.107-&gt;torch-&gt;-r requirements.txt (line 5))
+  Using cached nvidia_nvjitlink_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nbclient&gt;=0.5.0 (from nbconvert-&gt;-r requirements.txt (line 4))
+  Using cached nbclient-0.7.4-py3-none-any.whl.metadata (7.9 kB)
+Collecting websockets&gt;=9.0 (from voila-&gt;-r requirements.txt (line 7))
+  Using cached websockets-12.0-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+Using cached livelossplot-0.5.5-py3-none-any.whl (22 kB)
+Using cached torch-2.3.0-cp310-cp310-manylinux1_x86_64.whl (779.1 MB)
+Using cached nvidia_cublas_cu12-12.1.3.1-py3-none-manylinux1_x86_64.whl (410.6 MB)
+Using cached nvidia_cuda_cupti_cu12-12.1.105-py3-none-manylinux1_x86_64.whl (14.1 MB)
+Using cached nvidia_cuda_nvrtc_cu12-12.1.105-py3-none-manylinux1_x86_64.whl (23.7 MB)
+Using cached nvidia_cuda_runtime_cu12-12.1.105-py3-none-manylinux1_x86_64.whl (823 kB)
+Using cached nvidia_cudnn_cu12-8.9.2.26-py3-none-manylinux1_x86_64.whl (731.7 MB)
+Using cached nvidia_cufft_cu12-11.0.2.54-py3-none-manylinux1_x86_64.whl (121.6 MB)
+Using cached nvidia_curand_cu12-10.3.2.106-py3-none-manylinux1_x86_64.whl (56.5 MB)
+Using cached nvidia_cusolver_cu12-11.4.5.107-py3-none-manylinux1_x86_64.whl (124.2 MB)
+Using cached nvidia_cusparse_cu12-12.1.0.106-py3-none-manylinux1_x86_64.whl (196.0 MB)
+Using cached nvidia_nccl_cu12-2.20.5-py3-none-manylinux2014_x86_64.whl (176.2 MB)
+Using cached nvidia_nvtx_cu12-12.1.105-py3-none-manylinux1_x86_64.whl (99 kB)
+Using cached triton-2.3.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (168.1 MB)
+Using cached torchvision-0.18.0-cp310-cp310-manylinux1_x86_64.whl (7.0 MB)
+Using cached voila-0.5.6-py3-none-any.whl (3.9 MB)
+Using cached nbclient-0.7.4-py3-none-any.whl (73 kB)
+Using cached websockets-12.0-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (130 kB)
+Using cached networkx-3.3-py3-none-any.whl (1.7 MB)
+Using cached nvidia_nvjitlink_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (21.1 MB)
+Installing collected packages: websockets, triton, nvidia-nvtx-cu12, nvidia-nvjitlink-cu12, nvidia-nccl-cu12, nvidia-curand-cu12, nvidia-cufft-cu12, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cuda-cupti-cu12, nvidia-cublas-cu12, networkx, nvidia-cusparse-cu12, nvidia-cudnn-cu12, nvidia-cusolver-cu12, torch, livelossplot, torchvision, nbclient, voila
+  Attempting uninstall: nbclient
+    Found existing installation: nbclient 0.10.0
+    Uninstalling nbclient-0.10.0:
+      Successfully uninstalled nbclient-0.10.0
+Successfully installed livelossplot-0.5.5 nbclient-0.7.4 networkx-3.3 nvidia-cublas-cu12-12.1.3.1 nvidia-cuda-cupti-cu12-12.1.105 nvidia-cuda-nvrtc-cu12-12.1.105 nvidia-cuda-runtime-cu12-12.1.105 nvidia-cudnn-cu12-8.9.2.26 nvidia-cufft-cu12-11.0.2.54 nvidia-curand-cu12-10.3.2.106 nvidia-cusolver-cu12-11.4.5.107 nvidia-cusparse-cu12-12.1.0.106 nvidia-nccl-cu12-2.20.5 nvidia-nvjitlink-cu12-12.4.127 nvidia-nvtx-cu12-12.1.105 torch-2.3.0 torchvision-0.18.0 triton-2.3.0 voila-0.5.6 websockets-12.0
+<span class="ansi-yellow-fg">WARNING: Running pip as the &#39;root&#39; user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv</span><span class="ansi-yellow-fg">
 </span></pre>
 </div>
 </div>
@@ -14766,12 +14832,53 @@ Requirement already satisfied: types-python-dateutil&gt;=2.8.10 in /opt/conda/li
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">'!jupyter nbextension enable --py widgetsnbextension'</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&#39;!jupyter nbextension enable --py widgetsnbextension&#39;</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">VBox</span><span class="p">,</span> <span class="n">Button</span><span class="p">,</span> <span class="n">FileUpload</span><span class="p">,</span> <span class="n">Output</span><span class="p">,</span> <span class="n">Label</span>
@@ -14850,6 +14957,31 @@ Requirement already satisfied: types-python-dateutil&gt;=2.8.10 in /opt/conda/li
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>VBox(children=(Label(value=&#39;Please upload a picture of a landmark&#39;), FileUpload(value={}, description=&#39;Upload&#39;…</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -14915,16 +15047,16 @@ Requirement already satisfied: types-python-dateutil&gt;=2.8.10 in /opt/conda/li
 <pre>executing: jupyter nbconvert --to html transfer_learning.ipynb
 [NbConvertApp] WARNING | Config option `kernel_spec_manager_class` not recognized by `NbConvertApp`.
 [NbConvertApp] Converting notebook transfer_learning.ipynb to html
-[NbConvertApp] Writing 845854 bytes to transfer_learning.html
+[NbConvertApp] Writing 834282 bytes to transfer_learning.html
 executing: jupyter nbconvert --to html app.ipynb
 [NbConvertApp] WARNING | Config option `kernel_spec_manager_class` not recognized by `NbConvertApp`.
 [NbConvertApp] Converting notebook app.ipynb to html
-[NbConvertApp] Writing 602874 bytes to app.html
+[NbConvertApp] Writing 604575 bytes to app.html
 executing: jupyter nbconvert --to html cnn_from_scratch.ipynb
 [NbConvertApp] WARNING | Config option `kernel_spec_manager_class` not recognized by `NbConvertApp`.
 [NbConvertApp] Converting notebook cnn_from_scratch.ipynb to html
-[NbConvertApp] Writing 2080355 bytes to cnn_from_scratch.html
-Adding files to submission_2024-05-08T01h53m.zip
+[NbConvertApp] Writing 2119965 bytes to cnn_from_scratch.html
+Adding files to submission_2024-05-10T21h15m.zip
 src/model.py
 src/transfer.py
 src/helpers.py
@@ -14942,7 +15074,7 @@ cnn_from_scratch.html
 transfer_learning.html
 
 -------------------------------------------------------------
-Done. Please submit the file submission_2024-05-08T01h53m.zip
+Done. Please submit the file submission_2024-05-10T21h15m.zip
 -------------------------------------------------------------
 </pre>
 </div>
